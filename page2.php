@@ -25,13 +25,18 @@ $tableau2 = array(
     <title>Document</title>
 </head>
 <body>
-12 x 5 = <?php echo multiplier(12,5); ?>
-<ol>
-    <?php
-    for($i=0;$i<30;$i++) {
-        ?>
-        <li><?php echo $i;?> Bonjour</li>
-    <?php } ?>
-</ol>
+<?php
+foreach ($tableau1 as $item) {
+    echo "Couleur : " . $item . "<br>";
+}
+?>
+
+<?php
+foreach ($tableau2 as $key => $value) {
+?>
+<p style="color:<?php echo $value; ?>">La couleur "<?php echo $key; ?>" a pour code : <?php echo $value; ?></p>
+<?php
+}
+?>
 </body>
-</html> 
+</html>
